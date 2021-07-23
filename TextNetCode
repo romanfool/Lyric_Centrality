@@ -1,0 +1,26 @@
+##https://cbail.github.io/textasdata/text-networks/rmarkdown/Text_Networks.html#two-mode-networks
+##https://www.rdocumentation.org/packages/textnets/versions/0.1.1
+
+30songs<-read.csv(file.choose(), header=TRUE)VisTe
+bestbrow <- PrepText(bro, groupvar = "Song.For.Another.Time", textvar = "Lyrics", node_type = "words", tokenizer = "words", pos = "nouns", remove_stop_words = TRUE, compound_nouns = TRUE)
+bronet <- CreateTextnet(bestbro)
+VisTextNet(bronet, label_degree_cut = 0)
+text_centrality2 <- TextCentrality(lyricnetnet)
+write.csv(text_centrality2, "countcent.csv")
+library(htmlwidgets)
+vis <- VisTextNetD3(lyricnetnet, alpha=.1, height=1000, width=1400, bound=FALSE, zoom=TRUE, charge=-30)
+saveWidget(vis, "countrywords.html")
+
+##https://www.geeksforgeeks.org/python-find-dictionary-matching-value-in-list/
+##https://datatofish.com/export-dataframe-to-csv-in-r/
+
+
+> malesongs<- CreateTextnet(songprep2)
+
+> text_centrality <- TextCentrality(malesongs)
+
+> df<-data.frame(text_centrality)
+> write.csv(df, "C:\\Users\\Isaac\\Documents\\CountryLyrics\\malecent.csv")
+
+
+##https://www.rdocumentation.org/packages/textnets/versions/0.1.1
